@@ -49,13 +49,47 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
+Half adder
+```
+module HAHSexp3(a,b,cy,sm,df,bo);
+input a,b;
+output cy,sm,df,bo;
+xor(sm,a,b);
+and(cy,a,b);
+xor(df,a,b);
+and(bo,~a,b);
+endmodule
+```
+Half subratctor
+
+```
+module ex03(a,b,cy, sm, df,bo);
+input a,b;
+output sm,cy, df, bo;
+xor(sm,a,b);
+and(cy,a,b);
+xor(df,a,b);
+ and (bo,~a,b);
+ endmodule
+ ```
+
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by:Dhineshkumar.L
+RegisterNumber:24900785
 
 **RTL Schematic**
+![Screenshot 2024-12-02 133127](https://github.com/user-attachments/assets/ce4a1b23-f691-4f27-8c3f-148f265960ba)(half adder)
+![Screenshot 2024-12-02 141232](https://github.com/user-attachments/assets/c5551a8b-1428-4511-ac00-78a02f8260ff)(half subractor)
+
+
 
 **Output/TIMING Waveform**
+![Screenshot 2024-12-02 133008](https://github.com/user-attachments/assets/6fe75c8b-cc22-498e-a068-5dbb42c2f530)(half adder wave form)
+![Screenshot 2024-12-02 185107](https://github.com/user-attachments/assets/7a4eb8fa-41b6-495b-bc09-ed6f94d1d00c)(half subractor wave form)
+
+
 
 **Result:**
+The truth table for half adder and half subtracter are verified successfully.
